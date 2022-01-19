@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>虎符生成器</title>
+    <meta http-equiv="x-ua-compatible" content="IE=dege">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="js/rem.js"></script>
+</head>
+<body>
+<div class="one" id="one">
+    <!--第一页-->
+    <div class="bg_2" id="bg_2">
+        <img src="img/bg2.png">
+    </div>
+    <div class="bg_3" id="bg_3">
+        <img src="img/bg3.png">
+    </div>
+    <div class="loader" id="loader">
+        <span class="loader_bar" style="width: 50%"></span>
+    </div>
+    <div class="back_1" id="back_1">
+        <img src="img/back_1.jpg">
+    </div>
+</div>
+</body>
+</html>
+<!--<script src="./js/index.js"></script>-->
+<script src="js/jQuery.js"></script>
+<script src="./js/flexible.js"></script>
+<script src="js/html2canvas.js"></script>
+<script>
+    var two = document.getElementById('two')
+    var one = document.getElementById('one')
+    var three = document.getElementById('three')
+    var four = document.getElementById('four')
+    var five = document .getElementById('five')
+    var six=document.getElementById('six')
+    var seven=document.getElementById('seven')
+    var seven_none=document.getElementById('seven_none')
+    var loader_bar = document.querySelector('.loader_bar')
+    var myVid = document.getElementById("video1");
+    var v1 = document.getElementById("v1");
+    var v1_1 = document.getElementById("v1_1");
+    var v2 = document.getElementById("v2");
+
+    var i = 0
+    var ei = document.getElementById('ei')
+    var back_2 =document.getElementById('back_2')
+    var button_1 =document.getElementById('button_1')
+
+
+    var item = setInterval(() => {
+        i++
+        loader_bar.style.width = i + '%'
+        if (i === 100) {
+            window.location.href='3.html'
+        }
+    }, 20)
+</script>

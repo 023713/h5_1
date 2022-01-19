@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body id="body">
+  <video id='video' src="./img/video1.mp4" playsinline=true></video>
+  <button onclick="playVideo()">播放视频</button>
+
+</body>
+<script src="js/html2canvas.js"></script>
+<div id="7">
+  <img src="img/11.png" id="12">
+</div>
+
+<script>
+  function playVideo() {
+    const video = document.getElementById('video');
+    // video.play();
+    console.log(video);
+    // html2canvas(document.querySelector("#body")).then(canvas => {
+    //     document.body.appendChild(canvas)
+    // });
+    html2canvas(document.querySelector("#body"), {
+        scale: 2,//缩放比例,默认为1
+        allowTaint: false,//是否允许跨域图像污染画布
+        useCORS: true,//是否尝试使用CORS从服务器加载图像
+        width: '500',//画布的宽度
+        height: '500',//画布的高度
+        backgroundColor: '#000000',//画布的背景色，默认为透明
+    }).then((canvas) => {
+        //将canvas转为base64格式
+        var imgUri = canvas.toDataURL("image/png");
+        let img = document.createElement('img');
+        img.src=imgUri;
+        img.width='500';
+
+     document.getElementById('7').appendChild(img)
+
+        // console.log(imgUri);
+    });
+  }
+</script>
+</html>

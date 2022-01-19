@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>虎符生成器</title>
+    <meta http-equiv="x-ua-compatible" content="IE=dege">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="js/rem.js"></script>
+</head>
+<!--第二页过渡-->
+
+<div class="v1" id="v1">
+    <div class="v1_1" id="v1_1">
+        <img src="img/xxxi.png">
+    </div>
+</div>
+<!--第二頁-->
+<div class="two" id="two">
+    <div id="img_q" class="img_q">
+        <div class="button_1" id="button_1">
+            <button onclick="enableAutoplay()" type="button" id="mybtn"><img src="img/button_1.png"></button>
+        </div>
+        <div class="back_2" id="back_2">
+            <img src="img/back_2.jpg">
+        </div>
+        <div class="backq_2" id="backq_2">
+            <img src="img/11.png" id="mybtn_1">
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>
+
+<script src="js/jQuery.js"></script>
+<script src="./js/flexible.js"></script>
+<script src="js/html2canvas.js"></script>
+<script>
+    var v1=document.getElementById('v1')
+    var v1_1=document.getElementById('v1_1')
+    var back_2=document.getElementById('back_2')
+    var two =document.getElementById('two')
+    var mybtn = document.getElementById("mybtn");
+    var button_1 = document.getElementById("button_1");
+    mybtn.enableAutoplay = function () {
+        setTimeout('  window.location.href=\'4.html\'', 2000)
+        setTimeout('   v1.style.display=\'none\'', 4000)
+        v1.style.display = 'block'
+        v1_1.style.animation = 'v1_1 2s forwards'
+        back_2.style.animation = 'back_1 2s 1'
+        button_1.style.animation = 'tb_1 2s 1'
+    }
+
+</script>
